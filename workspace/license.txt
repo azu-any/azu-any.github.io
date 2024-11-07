@@ -1,0 +1,11 @@
+Model Information:
+* title:	Workspace Study
+* source:	https://sketchfab.com/3d-models/workspace-study-cc7460534919447ca6c3d8d8bcf16ac5
+* author:	N01516 (https://sketchfab.com/N01506)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Workspace Study" (https://sketchfab.com/3d-models/workspace-study-cc7460534919447ca6c3d8d8bcf16ac5) by N01516 (https://sketchfab.com/N01506) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
