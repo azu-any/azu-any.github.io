@@ -43,9 +43,10 @@ import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 
 import link from "./link.svg";
-import oerwf from "./oerwf.png";
+import oerwf from "./projects/oerwf.png";
+import micai from "./projects/micai.png";
 
-
+import jorge from "./testimonials/jorge.jpeg";
 
 export {
   logo,
@@ -90,4 +91,6 @@ export {
   apple,
   link,
   oerwf,
+  micai,
+  jorge,
 };

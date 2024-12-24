@@ -10,25 +10,21 @@ import {
     git,
     figma,
     oerwf,
-    tesla,
-    shopify,
-    carrent,
-    jobit,
-    tripguide,
     python,
     c,
     swift,
     java,
     latex,
-    sql,
     postgres,
     xampp,
     php,
     abat,
     udlap,
     apple,
+    micai,
+    jorge,
   } from "../assets";
-  
+
   export const navLinks = [
     {
       id: "about",
@@ -163,47 +159,51 @@ import {
   
   const testimonials = [
     {
-      testimonial:
-        "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-      name: "Sara Lee",
-      designation: "CFO",
-      company: "Acme Co",
-      image: "https://randomuser.me/api/portraits/women/4.jpg",
-    },
-    {
-      testimonial:
-        "I've never met a web developer who truly cares about their clients' success like Rick does.",
-      name: "Chris Brown",
-      designation: "COO",
-      company: "DEF Corp",
-      image: "https://randomuser.me/api/portraits/men/5.jpg",
-    },
-    {
-      testimonial:
-        "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-      name: "Lisa Wang",
-      designation: "CTO",
-      company: "456 Enterprises",
-      image: "https://randomuser.me/api/portraits/women/6.jpg",
+      testimonial: "During my time working with Azuany, I have discovered that despite her young age, she is a talented, hardworking, committed and highly capable computer systems engineering student who excels in artificial intelligence and python development. She has remarkably completed her tasks surpassing the performance of other interns and junior developers.",
+      name: "Jorge García",
+      designation: "AI Developer",
+      company: "abat Northamerica",
+      image: jorge
     },
   ];
   
   const projects = [
     {
-      name: "OERWF",
+      name: "Easy for Us, Complex for AI: Assessing the Coherence of Generated Realistic Images",
       description:
-        "An open educational resource for high school students for learning quantum mechanics using GeoGebra and eXeLearning.",
+        "(Published in Springer) The paper presents a survey of current metrics and criteria for assessing the coherence of AI-generated images in terms of realism and quality.",
+        tags: [
+          {
+            name: "AI",
+            color: "blue-text-gradient",
+          },
+        {
+          name: "Realism",
+          color: "green-text-gradient",
+        },
+        {
+          name: "ScientificPaper",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: micai,
+      source_code_link: "https://link.springer.com/chapter/10.1007/978-3-031-75540-8_15",
+    },
+    {
+      name: "Open Educational Resources for the Wave Function - OERWF",
+      description:
+        "An open educational resource for high school students for learning about the wave function, a topic  in quantum mechanics using GeoGebra and eXeLearning.",
       tags: [
         {
           name: "eXeLearning",
           color: "blue-text-gradient",
         },
         {
-          name: "html",
+          name: "HTML",
           color: "green-text-gradient",
         },
         {
-          name: "css",
+          name: "CSS",
           color: "pink-text-gradient",
         },
       ],
