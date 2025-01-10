@@ -4,7 +4,7 @@ import { OrbitControls, Preload, useGLTF } from '@react-three/drei'
 
 import CanvasLoader from '../Loader'
 
-const Rocket = () => {
+const Rocket = ({ isMobile }) => {
 
   const rocket = useGLTF('./rocket/scene.gltf')
 
@@ -13,8 +13,8 @@ const Rocket = () => {
   // Rotate the object on all 3 axes
   useFrame(() => {
     if (rocketRef.current) {
-      rocketRef.current.rotation.x = Math.PI / 3; 
-      rocketRef.current.rotation.y += 0.008; 
+      //rocketRef.current.rotation.x = Math.PI / 3; 
+      rocketRef.current.rotation.y += 0.008;
     }
   });
   
@@ -24,8 +24,9 @@ const Rocket = () => {
       <primitive 
         object={rocket.scene} 
         scale={10} 
-        position={[-1, -1, 0]}  
-        rotation-y={0}
+        position={ isMobile ? [-2, -1, 0] : [-1, -1, 0]}  
+        rotation-y={0.008}
+        rotation-x={Math.PI / 3}
         ref={rocketRef} 
       />
   );
@@ -78,12 +79,15 @@ const RocketCanvas = () => {
         
         <OrbitControls 
           rotation={[0, 0, 0]}
-          enablePan={false}
+          enablePan={true}
           enableZoom={false} 
-          maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2}
+          enableRotate={true}
+          target={[0, 0, Math.PI / 3]}
+          //target={isMobile ? [-2, -1, 0] : [-1, -1, 0]}
+          maxPolarAngle={ Math.PI / 2}
+          minPolarAngle={ Math.PI / 2}
         />
-        <Rocket  />
+        <Rocket isMobile={isMobile} />
         <Preload all />
       </Suspense>
 

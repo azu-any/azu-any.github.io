@@ -6,55 +6,23 @@ import CanvasLoader from '../Loader'
 
 const Computers = ({ isMobile }) => {
 
-  const computer = useGLTF("./macbook/scene.gltf")
+  const computer = useGLTF("./desktop/Desktop.gltf")
   
   return (
     <mesh>
       <spotLight position={[10, 10, 5]} angle={Math.PI} prenumbra={1} intensity={0.5} castShadow shadow-mapSize={1024} />
-      <primitive 
-        object={computer.scene} 
-        scale={isMobile ? 1 : 1.5} 
-        position={isMobile ? [0.2, -3, 0] : [0, -3, 0]} 
-        rotation = {[Math.PI/4, 0 ,0]} 
-      />
-    </mesh>
-  );
-};
-
-const Phone = ({ isMobile }) => {
-
-  const phone = useGLTF("./iphone/scene.gltf")
-  
-  return (
-    <mesh>
-     <directionalLight position={[4.4, -2, -0.5]} angle={Math.PI} prenumbra={0.1} intensity={0.5} castShadow shadow-mapSize={1024} />
-      <primitive 
-        object={phone.scene} 
-        scale={isMobile ? 10 : 15} 
-        position={isMobile ? [2.5, -3, 0.5] : [4, -3, 0.5]} 
-        rotation = {[-0.2, Math.PI - 0.3, 0.4]} 
-      />
-    </mesh>
-  );
-};
-
-
-const Airpods = ({ isMobile }) => {
-  
-  const airpods = useGLTF("./airpods/scene.gltf")
-  
-  return (
-    <mesh>
+      <directionalLight position={[4.4, -2, -0.5]} angle={Math.PI} prenumbra={0.1} intensity={0.5} castShadow shadow-mapSize={1024} />
       <spotLight position={[-5, -10, 0]} angle={Math.PI/2} prenumbra={1} intensity={1} castShadow shadow-mapSize={1024} />
       <primitive 
-        object={airpods.scene} 
-        scale={isMobile ? 23 : 35} 
-        position={isMobile ? [0, -6, 6] : [0, -6, 6]} 
-        rotation = {isMobile ? [-0.2, -2.6, 0] : [-0.5, -2.4, 0]} 
+        object={computer.scene} 
+        scale={isMobile ? 4 : 7} 
+        position={isMobile ? [0.2, -3, 0] : [0, -3, 0]} 
+        rotation = {[Math.PI/5, 0 ,0]} 
       />
     </mesh>
   );
 };
+
 
 const ComputersCanvas = () => {
 
@@ -89,7 +57,7 @@ const ComputersCanvas = () => {
     gl = {{ preserveDrawingBuffer: true }}
     >
       <Suspense fallback={<CanvasLoader />} >
-        <OrbitControls enableZoom={false} maxPolarAngle={Math.PI /2} minPolarAngle={Math.PI / 2} />
+        <OrbitControls enableZoom={false} maxPolarAngle={Math.PI /2} minPolarAngle={Math.PI / 2} enablePan={false} />
 
       <ambientLight intensity={2} />
       <hemisphereLight intensity={0.00005} groundColor="black" />
@@ -97,11 +65,7 @@ const ComputersCanvas = () => {
       <directionalLight position={[0, -5, 0]} intensity={1} />
       
         <group>
-
           <Computers isMobile={isMobile} />
-          <Airpods isMobile={isMobile} />
-          <Phone isMobile={isMobile} />
-
         </group>
        
       </Suspense>
