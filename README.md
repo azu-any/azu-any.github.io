@@ -2,7 +2,7 @@
 
 This is my personal online [portfolio](https://azuanymila.me/). 
 
-[![Watch the demo](https://raw.githubusercontent.com/azu-any/azu-any.github.io/main/assets/portfolio.png)]((https://raw.githubusercontent.com/azu-any/azu-any.github.io/main/assets/demo.mp4)
+[![Watch the demo](https://raw.githubusercontent.com/azu-any/azu-any.github.io/main/assets/portfolio.png)](https://raw.githubusercontent.com/azu-any/azu-any.github.io/main/assets/demo.mp4)
 
 The website is hosted on GitHub Pages.
 
