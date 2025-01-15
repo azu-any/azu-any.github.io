@@ -22,6 +22,10 @@ const App = () => {
           <StarsCanvas />
         </div>
 
+        <footer className="bg-black-100 text-white text-center py-10">
+          <p>&copy; 2024 - Designed and developed by <a href="
+          https://www.linkedin.com/in/azuany-mila" target="_blank" rel="noreferrer">Azuany Mila Ceron</a></p>
+        </footer>
       </div>
     </BrowserRouter>
   );
