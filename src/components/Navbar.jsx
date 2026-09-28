@@ -11,37 +11,37 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <nav 
+    <nav
       className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}
     >
 
       <div className="w-full flex items-center justify-between items-0center max-w-7xl mx-auto">
-        <Link 
-        to="/" 
-        className="flex items-center gap-2" 
-        onClick={() => {
-          setActive("");
-          window.scrollTo(0, 0);
+        <Link
+          to="/"
+          className="flex items-center gap-2"
+          onClick={() => {
+            setActive("");
+            window.scrollTo(0, 0);
           }}
         >
           <img src={logo} alt="logo" className="h-12 object-contain" />
           <p className='text-white text-[18px] font-bold cursor-pointer flex'>
-            Azuany MILA &nbsp; 
+            Azuany MILA &nbsp;
             <span className='sm:block hidden'>| CS Engineer &nbsp; </span>
           </p>
         </Link>
         <ul className='list-none hidden sm:flex flex-row  gap-10'>
           {navLinks.map((link) => (
             <li
-            key={link.id}
-            className={`${
-              active === link.title ? "tex-white" 
-              : "text-secondary"
-            } hover:text-white text-[18px] font-medium cursor-pointer`} 
-            onClick={() => setActive(link.title)}
+              key={link.id}
+              className={`${active === link.title ? "tex-white"
+                  : "text-secondary"
+                } hover:text-white text-[18px] font-medium cursor-pointer`}
+              aria-current={active === link.title ? "page" : undefined}
+              onClick={() => setActive(link.title)}
             >
               <a href={`#${link.id}`}>{link.title}</a>
-              
+
             </li>
           ))}
 
@@ -52,23 +52,24 @@ const Navbar = () => {
             alt="menu"
             className="w-[28px] h-[28px] cursor-pointer object-contain"
             onClick={() => setToggle(!toggle)}
+            aria-label="Toggle menu"
+            aria-expanded={toggle}
           />
           <div className={`${!toggle ? 'hidden' : 'flex'} p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-x1`}>
             <ul className='list-none flex justify-end items-start flex-col gap-4'>
               {navLinks.map((link) => (
                 <li
-                key={link.id}
-                className={`${
-                  active === link.title ? "tex-white" 
-                  : "text-secondary"
-                } font-poppins font-medium cursor-pointer text-[16px]`} 
-                onClick={() => {
-                  setActive(link.title);
-                  setToggle(!toggle);
-                }}
+                  key={link.id}
+                  className={`${active === link.title ? "tex-white"
+                      : "text-secondary"
+                    } font-poppins font-medium cursor-pointer text-[16px]`}
+                  onClick={() => {
+                    setActive(link.title);
+                    setToggle(!toggle);
+                  }}
                 >
                   <a href={`#${link.id}`}>{link.title}</a>
-                  
+
                 </li>
               ))}
             </ul>

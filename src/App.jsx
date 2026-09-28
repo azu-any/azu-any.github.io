@@ -6,7 +6,10 @@ const App = () => {
   return (
     <BrowserRouter>
       <div className="relative z-0 bg-primary">
-        <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center"> 
+        <a href="#about" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:p-4 focus:bg-white focus:text-primary focus:font-bold rounded-lg">
+          Skip to content
+        </a>
+        <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
           <Navbar />
           <Hero />
         </div>
@@ -16,7 +19,7 @@ const App = () => {
         <Tech />
         <Works />
         {<Feedbacks />}
-        
+
         <div className="relative z-0">
           <Contact />
           <StarsCanvas />

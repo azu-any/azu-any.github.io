@@ -7,6 +7,7 @@ import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 
+// TECH ICONS
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
 import figma from "./tech/figma.png";
@@ -30,21 +31,19 @@ import php from "./tech/php.svg";
 import xampp from "./tech/xampp.svg";
 import latex from "./tech/latex.svg";
 
-import meta from "./company/meta.png";
-import shopify from "./company/shopify.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
+// COMPANY LOGOS
 import abat from "./company/abat.png";
 import udlap from "./company/udlap.png";
 import apple from "./company/apple.png";
-
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
-
+import academy from "./company/academy.png";
 import link from "./link.svg";
+
+// PROJECT IMAGES
 import oerwf from "./projects/oerwf.png";
 import micai from "./projects/micai.png";
+import stomadida from "./projects/stomadida.png";
+import maia from "./projects/maia.png";
+import colorscore from "./projects/colorscore.png";
 
 import jorge from "./testimonials/jorge.jpeg";
 
@@ -70,13 +69,6 @@ export {
   tailwind,
   typescript,
   threejs,
-  meta,
-  shopify,
-  starbucks,
-  tesla,
-  carrent,
-  jobit,
-  tripguide,
   python,
   c,
   swift,
@@ -89,8 +81,12 @@ export {
   abat,
   udlap,
   apple,
+  academy,
   link,
   oerwf,
   micai,
+  stomadida,
+  colorscore,
+  maia,
   jorge,
 };
